@@ -13,15 +13,14 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-  getItem('Class 1', '1', <PieChartOutlined />),
-  getItem('Class 2', '2', <DesktopOutlined />),
-  getItem('User', 'sub1', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
+  getItem('Temas', 'sub1', <TeamOutlined />, [
+    getItem('Greetings', '1'),
+    getItem('Farewells', '2'),
+    getItem('Introductions', '3'),
+    getItem('Expressions', '4'),
+    getItem('Personal information', '5'),
+    getItem('The alphabet', '6'),
   ]),
-  getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-  getItem('Files', '9', <FileOutlined />),
 ];
 export default function App() {
   const [collapsed, setCollapsed] = useState(false);
