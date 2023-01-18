@@ -1,6 +1,7 @@
 "use client"
 import { FileOutlined, PieChartOutlined, UserOutlined, DesktopOutlined, TeamOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme, Typography } from 'antd';
+import Image from 'next/image';
 import { useState } from 'react';
 const { Header, Content, Footer, Sider } = Layout;
 const { Paragraph, Title } = Typography;
@@ -28,6 +29,7 @@ export default function App() {
     token: { colorBgContainer,colorPrimaryTextActive },
   } = theme.useToken();
   return (
+    <>
     <Layout
       style={{
         minHeight: '100vh',
@@ -39,22 +41,25 @@ export default function App() {
             display: "flex",
             height: 32,
             margin: 16,
-            padding: 0,
-            //background: 'rgba(255, 255, 255, 0.2)',
-            justifyContent:"center",
+            padding: "0 0 0 5%",
+            background: 'white',
+            borderRadius:"10px",
+            justifyContent:"start",
             alignContent:"center",
           }}
-        >
-            <Title
-                    editable
-                    level={5}
-                    style={{
-                      margin: 0,
-                      color:"white"
-                    }}
-            >
-                Learning English
-            </Title>
+        >   
+           <Image
+           src={"/Logo.png"}
+           alt={"Logo de Eureka"}
+           width={30}
+           height={30}
+           />
+          <Title
+          level={5}
+          style={{margin:"2px 0 0 5px"}}
+          >
+            | Eureka
+          </Title>
         </div>
         
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
@@ -98,9 +103,10 @@ export default function App() {
             textAlign: 'center',
           }}
         >
-          Learning English
+          <p> {`\\frac{1}{2}`} </p>
         </Footer>
       </Layout>
     </Layout>
+    </>
   );
 };
